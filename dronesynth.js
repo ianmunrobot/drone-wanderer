@@ -30,12 +30,12 @@ nx.onload = function() {
   $container.height($(window).height() - 50);
 
   // display current fundamental
-  $('#fundamental-slider').on('input, touchmove', function(e) {
+  $('#fundamental-slider').on('input', function(e) {
     $('#fundamental').text(e.target.value + 'Hz');
   });
 
   // change fundamental frequency
-  $('#fundamental-slider').on('mouseup, touchend', function(e) {
+  $('#fundamental-slider').on('mouseup', function(e) {
     fundamental = e.target.value;
     Object.keys(oscillators).forEach(function (osc){
       oscillators[osc].frequency.value = (fundamental * +osc.slice(4));
