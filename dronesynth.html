@@ -9,7 +9,7 @@
     <script type="text/javascript" src="./scripts/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--<script type="text/javascript" src="./scripts/draggabilly.js"></script>-->
-    <script type="text/javascript" src="./scripts/StartAudioContext.js"></script>
+    <!--<script type="text/javascript" src="./scripts/StartAudioContext.js"></script>-->
     <script type="text/javascript" src="./scripts/nexusUI.js"></script>
     <script type="text/javascript" src="./dronesynth.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css" />
@@ -25,18 +25,49 @@
         <nav class="navbar navbar-inverse navbar-fixed-bottom" id="options-navbar">
           <div class="container-fluid">
             <div class="row">
-            <div class="col-xs-4" id="button-holder">
-              <div class="btn-group" role="group" aria-label="...">
-                <button type="button" id="sine" class="btn btn-dark btn-primary active">Sine</button>
-                <button type="button" id="triangle" class="btn btn-primary">Triangle</button>
-                <button type="button" id="square6" class="btn btn-primary">Square</button>
-                <button type="button" id="sawtooth6" class="btn btn-primary">Saw</button>
+              <div class="col-xs-4" id="button-holder">
+                <div class="btn-group" role="group" aria-label="waveshape">
+                  <button type="button" id="sine" class="btn btn-dark btn-primary active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48">
+                      <g>
+                        <path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M4,24 c0,0 5,-20 10,-20 c5,0 10,20 10,20 c0,0 5,20 10,20 c5,0 10,-20 10,-20"/>
+                      </g>
+                    </svg>
+                  </button>
+                  <button type="button" id="triangle" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48">
+                      <g>
+                        <path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M4,24 l10,-20 20,40 10,-20"/>
+                      </g>
+                    </svg>
+                  </button>
+                  <button type="button" id="square6" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48">
+                      <g>
+                        <path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M4,24 l0,-20 20,0 0,40 20,0 0,-20"/>
+                      </g>
+                    </svg>
+                  </button>
+                  <button type="button" id="sawtooth6" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48">
+                      <g>
+                        <path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M4,24 l0,-20 40,40 0,-20"/>
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="col-xs-4" id="slider-holder">
+                <div class="row">
+                  <div class="col-xs-9">
+                    <input type="range" id="fundamental-slider" min="20" max="60" step="1" value="32"></input>
+                  </div>
+                  <div class="col-xs-3">
+                    <label for="fundamentalfreq" id="fundamental">32Hz</label>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-xs-4" id="slider-holder">
-              <input type="range"></input>
-            </div>
-          </div>
           </div>
         </nav>
       </div>
