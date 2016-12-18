@@ -1,12 +1,5 @@
 /* global nx Tone */
 
-//target the entire page, and listen for touch events
-$('html, body').on('touchstart, touchmove', function(e){
-     //prevent native touch activity like scrolling
-    //  console.log(e.type);
-    //  e.preventDefault();
-});
-
 var NODES = 32;
 
 Tone.Master.volume.value = -Infinity;
@@ -35,7 +28,6 @@ nx.onload = function() {
   // set box height
   var $container = $('#joints-holder');
   $container.height($(window).height() - 50);
-  console.log($container.height(), $container.width() + 16);
 
   // display current fundamental
   $('#fundamental-slider').on('input, touchmove', function(e) {

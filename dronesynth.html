@@ -22,10 +22,8 @@
         </div>
       </div>
       <div class="row">
-      <div class="footer">
-        <nav class="navbar navbar-inverse navbar-fixed-bottom" id="options-navbar">
-          <!--<div class="container-fluid">-->
-            <!--<div class="row">-->
+        <div class="footer">
+          <nav class="navbar navbar-inverse navbar-fixed-bottom" id="options-navbar">
               <div class="col-lg-2 col-sm-3 col-xs-7" id="button-holder">
                 <div class="btn-group" role="group" aria-label="waveshape">
                   <button type="button" title="sine" id="sine" class="btn btn-dark btn-primary active">
@@ -56,23 +54,22 @@
                       </g>
                     </svg>
                   </button>
-                </div>
-              </div>
+                </div><!--btn-group-->
+              </div><!--btn-column-->
               <div class="col-lg-2 col-sm-3 col-xs-5" id="slider-holder">
                 <div class="row">
                   <div class="col-xs-9">
-                    <input type="range" title="fundamental" id="fundamental-slider" min="20" max="60" step="1" value="32"></input>
+                    <input type="range" title="fundamental" id="fundamental-slider" min="20" max="60" step="1" value="32" />
                   </div>
                   <div class="col-xs-3">
                     <label for="fundamentalfreq" id="fundamental">32Hz</label>
                   </div>
                 </div>
-              </div>
-            </div>
-          <!--</div>-->
-        </nav>
-      </div>
-    </div>
+              </div><!--slider-column-->
+            </nav>
+          </div><!--footer-->
+        </div>
+      </div><!--container-fluid-->
     </div>
   </body>
 </html>
